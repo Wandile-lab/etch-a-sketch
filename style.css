@@ -1,0 +1,23 @@
+.area {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: 360px;
+  margin-top: 35px;
+  background-color: grey;
+  width: 80%;  /* Set width to 80% of the parent container (or any value you prefer) */
+  max-width: 800px;  /* Optionally limit the maximum width */
+  aspect-ratio: 1;   /* Keep the height equal to the width */
+  
+}
+
+.blocks {
+  width: calc(100% / var(--answer));  /* Adjust width based on the number of blocks */
+  height: calc(100% / var(--answer)); /* Adjust height based on the number of blocks */
+  border: 2px solid rgb(161, 125, 5);
+
+}
+
+#btn {
+  display: block;
+  margin: 0 auto; /* Center the button horizontally */
+}
