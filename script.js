@@ -3,13 +3,13 @@ const container = document.querySelector('.container');
 function input() {
   let userInput = prompt('How many squares do you want per side of the square?');
   userInput = parseInt(userInput, 10);
-  document.documentElement.style.setProperty('--answer', userInput);  // Set the CSS variable for the grid size
+  document.documentElement.style.setProperty('--answer', userInput);  // Sets the grid size
   return userInput;    
 }
 
 /*makes button call on input function*/
 document.getElementById('btn').addEventListener("click", () => {
-  let userInput = input();  // Get user input
+  let userInput = input();  
   createArea(userInput);    // Create area with the input value
 });
 
@@ -27,7 +27,7 @@ function createArea(answer) {
   }
 
   function getRandomColor() {
-    // Generate a random color in hex format
+    // Generates a random color in hex format
     const letters = '0123456789ABCDEF';
     let color = '#';
     for (let i = 0; i < 6; i++) {
@@ -36,8 +36,8 @@ function createArea(answer) {
     return color;
   }
 
-  // Add 'hover' event listeners on each block after they are created
-  const blockList = area.querySelectorAll('.blocks');  // Select all the blocks within the created area
+  // Adds 'hover' event listeners on each block after they are created
+  const blockList = area.querySelectorAll('.blocks');  // Selects all the blocks within the created area
   blockList.forEach((block) => { 
     block.addEventListener("mouseover", () => {   
       block.style.backgroundColor = getRandomColor(); 
